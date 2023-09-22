@@ -1,131 +1,47 @@
-## Overview of Math 104A
+## About
 
-### Contents
+This repository collects materials for Introductory Numerical Analysis by Jea-Hyun Park. 
+Date created: 2023-09-22
 
----
+## Computation environment
 
-#### Computating environment 
+We use Python and Jupyter notebook.
 
-##### Python 
+### Google Colab
 
-##### Numpy package
+Google Colab has all necessary libraries set up, and you can interact with the notebooks with no installations.
 
-##### Jupyter notebook
+1. Go to [Google Colab](https://colab.research.google.com/)
 
----
+![colab1](images/colab1.png)
 
-#### What is numerical analysis?
+2. Open notebooks by importing from Github repository `https://github.com/jhparkyb/NumAnalNotes_Pub.git`. 
 
-##### Typical flow of numerical analysis
+![colab2](images/colab2.png)
 
-##### What do we want to learn?
+3. Notebook file is ready.
 
----
+![colab3](images/colab3.png)
 
-#### Root finding
 
-##### Overview of the topic
+### Desktop/Laptop
 
-###### Problem of interest
+Install the following language and libraries. If these look like a headache, use Google Colab. 
 
-###### Methods
+1. Python 3.8 +
+2. NumPy
+3. Matplotlib
+4. Pandas 
 
-##### Bisection
+Install the following editor. 
+1. VS Code editor
+2. Extensions for Jupyter notebook: Jupyter
+3. Extensions for Markdown: e.g., Markdown Preview Enhanced
+4. Other extensions that may be helpful, e.g., Pylance, Python, 
 
-##### Newton's method
+## Report errors
 
-##### Secant method
-
-##### Fixed point iteration
-
-##### Summary
-
----
-
-#### Summary of interpolation theory
-
-##### Overview of the topic
-
-###### Problem of interest
-
-###### Methods
-
-##### TO Be completed.
-
----
-
-#### Numerical differentiation
-
-##### Overview of the topic
-
-###### Problem of interest
-
-###### Methods
-
-##### Forward, backward, centered difference
-
-##### Richardson's extrapolation
-
----
-
-#### Numerical integration
-
-##### Overview of the topic
-
-###### Problem of interest
-
-###### Methods
-
-##### Newton-Cotes
-
-###### Trapezoidal rule
-
-###### Simpson's rule
-
-###### Other Newton-Cotes formula
-
-###### Composite versions
-
-###### Error analysis
-
-##### Gaussian quadratures
-
-###### Some low order methods
-
-###### Error analysis
-
-#### Numerical methods for ODE
-
-##### Overview of the topic
-
-###### Problem of interest
-
-###### Methods
-
-##### Some standard methods
-
-##### Taylor series methods
-
-##### Runge-Kutta methods
-
-##### Linear multistep methods
-
-###### Adams-Bashforth methods
-
-###### Adams-Moulton methods
-
-###### Predictor-corrector methods
-
-###### Backward differentiation formulas (BDF)
-
-###### General linear multistep methods
-
-##### Errors
-
-###### Rough picture
-
-###### Important result
-
-
-
+If you spot any errors, please report them to me at your earliest convenience.
+- In person (preferred): After class or SH 6524 
+- Email: jhpark1@ucsb.edu 
 
