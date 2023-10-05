@@ -274,7 +274,7 @@ where $c(n)$ denotes the number of operations needed to compute the product of $
 -->
 >  **Question**
 >
-> Fill the talbe and find the best big-oh notation.
+> Fill the table and find the best big-oh notation.
 >
 > | Answer choice | big-oh |
 > |:-:|:-:|
@@ -534,7 +534,7 @@ $$
 
 - Big 'oh' notation allows us to focus only on the most important term out of (possibly) infinitely many terms. (See [Advantage of big-oh](#remark-advantage-of-big-oh))
 	
-	- In some cases, all terms except the big-oh term matter. (See [Example: Big-oh notation with exponential](#example-big-oh-notation-with-cosine))
+	- In some cases, all terms except the big-oh term matter. (See [Example: Big-oh notation with cosine](#example-big-oh-notation-with-cosine)) 
     - In other cases, only the big-oh term matters. (See [Example: Big-oh notation for complexity of matrix multiplication](#example-big-oh-notation-for-complexity-of-matrix-multiplication))
 - Big 'oh' is essentially *inequality*. It is not an equality, though its notation uses '$=$' sign. (See [Remark: Big-oh is about inequality, not equality](#remark-big-oh-is-about-inequality-not-equality))
 
