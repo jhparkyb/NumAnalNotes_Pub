@@ -56,7 +56,7 @@ After studying these notes, we will be able to
 
  **Example** (Taylor series of exponential -  easy language)
 
- Recall from calculus, for any $x\in\R$, we have
+ Recall from calculus, for any $x\in\mathbb{R}$, we have
  $$ e^x = 1+ x + \frac 1 2 x^2 + \frac 1 6 x^3 + \cdots + \frac 1 {n!} x^n +\cdots. $$
  Note that this "equality" is "more true" near $x_0=0$ since the series is expanded around $x_0=0$. For example, if $x=0.1$, then the sum becomes
  $$
@@ -163,7 +163,7 @@ There are slightly different variants of the definitions. We follow essentially 
 
 >  **Definition** (Big oh for growing quantities)
 >
-> Let $f$ and $g$ are real valued functions defined on near $\infty$ (i.e., $[N,\infty)$ for some $N\in\R \cup \{-\infty\}$). If there exist (fixed) constants $C>0$ and  $M>0$ such that 
+> Let $f$ and $g$ are real valued functions defined on near $\infty$ (i.e., $[N,\infty)$ for some $N\in\mathbb{R} \cup \{-\infty\}$). If there exist (fixed) constants $C>0$ and  $M>0$ such that 
 > $$|f(x)|\le C |g(x)| \quad \text{for all } x \in [M,\infty),$$
 > <!-- or,
 > $$ \frac{|f(x)|}{|g(x)|}\le C  \quad \text{for all } x \in [M,\infty),$$ -->
@@ -207,7 +207,7 @@ There are slightly different variants of the definitions. We follow essentially 
  
 >  **Example** (Taylor series of cosine)
 > 
->  Recall from calculus, for any $x\in\R$, we have
+>  Recall from calculus, for any $x\in\mathbb{R}$, we have
 >  $$
 > \cos x=\sum_{n=0}^{\infty} \frac{(-1)^n}{(2 n) !} x^{2 n} =1-\frac{x^2}{2 !}+\frac{x^4}{4 !}-\frac{x^6}{6 !}+\cdots,
 > $$
@@ -340,7 +340,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 
 > **Example** (Accuracy of difference quotient)
 >
-> Suppose that $f:\R \to \R$ is continuously differentiable near $x_0\in R$. Then, we have
+> Suppose that $f:\mathbb{R} \to \mathbb{R}$ is continuously differentiable near $x_0\in R$. Then, we have
 > \[ \frac{f(x_0 + h) - f(x_0)}{h} = f^\prime(x_0) + {\mathcal{O}\!\left( h \right)} \]
 > 
 > **Interpretation**
@@ -462,7 +462,7 @@ Since $g(x)/x^3 \to C$ as $x\to0$, by the definition of the limit, for $\epsilon
     \left| \frac{g(x)}{x^3} - C \right| < 1.
 \]
 
-Multiplying through by $|x|^3$ and using the inverse triangle inequality, i.e. $|a| - |b| \le |a-b|$ for all $a,b\in\R$, we have
+Multiplying through by $|x|^3$ and using the inverse triangle inequality, i.e. $|a| - |b| \le |a-b|$ for all $a,b\in\mathbb{R}$, we have
 
 \[
    |g(x)| - C|x|^3 \le \left|g(x) - Cx^3 \right| < |x|^3.
