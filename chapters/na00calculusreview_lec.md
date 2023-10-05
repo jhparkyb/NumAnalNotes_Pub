@@ -28,15 +28,6 @@ After studying these notes, we will be able to
   - tell which part is negilible and which part matters,
   - use correct big-oh notation after operations.
 
-#### Summary
-
-- Big 'oh' notation allows us to focus only on the most important term out of (possibly) infinitely many terms. (See [Advantage of big-oh](#remark-advantage-of-big-oh))
-	
-	- In some cases, all terms except the big-oh term matter. (See [Example: Big-oh notation with exponential](#example-big-oh-notation-with-exponential))
-    - In other cases, only the big-oh term matters. (See [Example: Big-oh notation for complexity of matrix multiplication](#example-big-oh-notation-for-complexity-of-matrix-multiplication))
-- Big 'oh' is essentially *inequality*. It is not an equality, though its notation uses '$=$' sign. (See [Remark: Big-oh is about inequality, not equality](#remark-big-oh-is-about-inequality-not-equality))
-
-- Eventually, people use big-oh notation at an intuitive level. But it is good to see it works rigorously as well to convince yourself. (See [Appendix](#appendix) for some rigorous approaches)
 
 ### Taylor's theorem
 
@@ -198,30 +189,11 @@ There are slightly different variants of the definitions. We follow essentially 
 > 
 > Then, the big-oh condition says that *the magnitude of $f$ can be controlled or bounded by $g$*. 
 > 
-> Example (finite quantity)
+><!-- > Example (finite quantity)
 > $\sin(x) ={\mathcal{O}\!\left( x \right)}$ as $x\to 0$, which is true, means that we can confidently say $\sin(x)$ is smaller than $x$ in absolute value (up to constant multiple) at least near $x_0=0$. 
 >
 > Example (growing quantity)
-> we have $-x^2+3x+\sqrt{x^3}={\mathcal{O}\!\left( x^2 \right)}$ as $x\to \infty$, which is also true. This means $-x^2+3x+\sqrt{x^3}$ is smaller than $x^2$ in magnitude (up to constant multiple) at least for big $x$ values.
->
-
-<!-- > **Question**
->
-> Suppose we are interested in $x$ values that are big. Complete the following using big-oh notation. 
-> $$-x^2+\sqrt{x^3}=(\qquad\qquad?\qquad\qquad)$$
->
-> (A) ${\mathcal{O}\!\left( x \right)}$ 
-> (B) ${\mathcal{O}\!\left( x^{3/2} \right)}$ 
-> (C) ${\mathcal{O}\!\left( x^2 \right)}$ 
-> (D) I don't see a good answer.
->
-> (Reminder) This is **about atmosphere**, not getting it right.
-> 
-> 1. Think for a short time.
-> 2. Share your guess with your pair.
-> 3. Type your answer in clicker.
-> 4. Feel free to say out loud. -->
-
+> we have $-x^2+3x+\sqrt{x^3}={\mathcal{O}\!\left( x^2 \right)}$ as $x\to \infty$, which is also true. This means $-x^2+3x+\sqrt{x^3}$ is smaller than $x^2$ in magnitude (up to constant multiple) at least for big $x$ values. -->
 > **Interpretation** (error form of big-oh)
 > 
 > The error form is the most common form of big-oh (e.g., $f(x) = g(x) + {\mathcal{O}\!\left( h(x) \right)}$ as $x\to x_0$). Intuitively, we can interpret it as follows:
@@ -231,11 +203,93 @@ There are slightly different variants of the definitions. We follow essentially 
 
 
 
-See [Example: Big-oh notation with exponential](#example-big-oh-notation-with-exponential) for a basic example.
+###### Example: Big-oh notation with cosine
+ 
+>  **Example** (Taylor series of cosine)
+> 
+>  Recall from calculus, for any $x\in\R$, we have
+>  $$
+> \cos x=\sum_{n=0}^{\infty} \frac{(-1)^n}{(2 n) !} x^{2 n} =1-\frac{x^2}{2 !}+\frac{x^4}{4 !}-\frac{x^6}{6 !}+\cdots,
+> $$
+> where the equality is in the sense of infinite sum: the sum on the right hand side converges to the left hand side.  Note that this "equality" is "more true" near $x_0=0$ since the series is expanded around $x_0=0$. For example, if $x=0.1$, then the sum becomes
+>  $$
+> \cos (0.1)=1-\frac{0.01}{2}+\frac{0.0001}{24}-\frac{0.000001}{720}+\cdots,   $$
+>  	After the first few terms, the magnitude of the remaining terms are so small that it does not change the whole sum much. For example, one may want to focus on the first three terms and write
+> 
+> $$ \begin{split}
+> \cos x &= 1 - \frac{x^2}{2 !} + \frac{x^4}{4 !}-\frac{x^6}{6 !}+\cdots	\\
+> 	&=1 - \frac{x^2}{2 !} + \frac{x^4}{4 !} + {\mathcal{O}\!\left( x^6 \right)}.
+> 	\end{split}
+> $$
+> 
+> The last equality is not trivial because it involves infinitely many terms, but it is true (See [Justification of lumping infinite sum](#justification-of-lumping-infinite-sum)).
+>  
+<!-- > In words, *the error caused by $1 - \frac{x^2}{2 !} + \frac{x^4}{4 !}$  in place of $\cos(x)$ near $x_0=0$ is essentially $x^6$ (up to a constant multiple), or *near $x_0=0$, $\cos(x)$ behaves almost like $1 - \frac{x^2}{2 !} + \frac{x^4}{4 !}$ with a small quantity similar to $x^6$ (up to constant multiple).* -->
 
-See [Remark: Big-oh is about inequality, not equality](#remark-big-oh-is-about-inequality-not-equality) to avoid possible confusion.
+>  **Question**
+>
+> Give the interpretation of the big-oh notation in the previous example. (Type in a short answer)
+>
+> (Reminder) This is **about atmosphere**, not getting it right.
+> 
+> 1. Think for a short time.
+> 2. Share your guess with your pair.
+> 3. Type your answer in clicker.
+> 4. Feel free to say out loud.
 
 
+
+###### Example: Big-oh notation for complexity of matrix multiplication
+> 
+>  **Example** (complexity of matrix multiplication)
+> 
+> $$\begin{bmatrix}
+> 1 & 2 & 3 \\
+> 4 & 5 & 6 \\
+> 7 & 8 & 9
+> \end{bmatrix}
+> \begin{bmatrix}
+> 2 \\
+> 3 \\
+> 4 
+> \end{bmatrix} = \begin{bmatrix}
+> a \\
+> b \\
+> c 
+> \end{bmatrix}
+> $$
+> 
+> Suppose we want to multiply $3\times 3$ matrix and $3\times 1$ column vector. Let us count how many operations are needed to do this. To get $a$, we need 3 (real number) multiplications and 2 (real number) additions. We need the same amount of computation for $b$ and $c$. If we increase the sizes to $4\times 4$ (matrix) and $4\times 1$ (vector), or more generally, to $n\times n$ (matrix) and $n\times 1$ (vector), we need the following number of operations.
+> | size | ($\times$) | ($+$) | total |
+> |:-:|:-:|:-:|:-:|
+> | 3 | $3\times3=9$| $2\times3=6$ | 15 |
+> | 4 | $4\times4=16$| $3\times4=12$ | 28 |
+> | $n$ | ? | ?| ? |
+<!--| n | $n\times n=n^2$| $(n-1)\times n=n^2 -n$ | $2n^2 -n$ |
+
+Using the big-oh notation for growing quantities (since $n\to\infty$ as we increase the size), we have
+$$ c(n) =  {\mathcal{O}\!\left( n^2 \right)}, $$
+
+where $c(n)$ denotes the number of operations needed to compute the product of $n\times n$ matrix and $n\times 1$ vector. This way, we can have a quick, but still good picture of how much it costs in terms of computation.  
+-->
+>  **Question**
+>
+> Fill the talbe and find the best big-oh notation.
+>
+> | Answer choice | big-oh |
+> |:-:|:-:|
+> |(A) | ${\mathcal{O}\!\left( n \right)}$ |
+> |(B) | ${\mathcal{O}\!\left( n^2 \right)}$ |
+> |(C) | ${\mathcal{O}\!\left( n^3 \right)}$ |
+> |(D) | I don't see a good answer. |
+> 
+> (Reminder) This is **about atmosphere**, not getting it right.
+> 
+> 1. Think for a short time.
+> 2. Share your guess with your pair.
+> 3. Type your answer in clicker.
+> 4. Feel free to say out loud.
+ 
 ### Properties
 
 We state and prove some frequently used properties of big-oh relations for the finite quantities(see the boardwork for the proofs). Similar results hold also for the growing quantities.
@@ -272,7 +326,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 > **Corollary** (product directly added to order)
 >
 > Suppose $f(x) = {\mathcal{O}\!\left( g(x) \right)}$ as $x\to x_0$. Then, 
-> $$ f(x) h(x) = {\mathcal{O}\!\left( g(x) |h(x)| \right)} \quad\text{as}\quad x\to x_0.$$
+> $$ f(x) h(x) = {\mathcal{O}\!\left( g(x) h(x) \right)} \quad\text{as}\quad x\to x_0.$$
 
 [Proof of product of big-oh's: directly added to order](https://jhparkyb.github.io/resources/images/na/na_bigoh_p2005.jpg)
 
@@ -281,77 +335,6 @@ We state and prove some frequently used properties of big-oh relations for the f
 
 
 ### Examples
-
-###### Example: Big-oh notation with cosine
-
- **Example** (Taylor series of cosine)
-
- Recall from calculus, for any $x\in\R$, we have
- $$
-\cos x=\sum_{n=0}^{\infty} \frac{(-1)^n}{(2 n) !} x^{2 n} =1-\frac{x^2}{2 !}+\frac{x^4}{4 !}-\frac{x^6}{6 !}+\cdots,
-$$
-where the equality is in the sense of infinite sum: the sum on the right hand side converges to the left hand side.  Note that this "equality" is "more true" near $x_0=0$ since the series is expanded around $x_0=0$. For example, if $x=0.1$, then the sum becomes
- $$
-\cos (0.1)=1-\frac{0.01}{2}+\frac{0.0001}{24}-\frac{0.000001}{720}+\cdots,   $$
- 	After the first few terms, the magnitude of the remaining terms are so small that it does not change the whole sum much. For example, one may want to focus on the first three terms and write
-
-$$ \begin{split}
-\cos x &= 1 - \frac{x^2}{2 !} + \frac{x^4}{4 !}-\frac{x^6}{6 !}+\cdots	\\
-	&=1 - \frac{x^2}{2 !} + \frac{x^4}{4 !} + {\mathcal{O}\!\left( x^6 \right)}.
-	\end{split}
-$$
-
-The last equality is not trivial because it involves infinitely many terms, but it is true (See [Justification of lumping infinite sum](#justification-of-lumping-infinite-sum)).
-
-
-###### Example: Big-oh notation for complexity of matrix multiplication
-
- **Example** (complexity of matrix multiplication)
-
-$$\begin{bmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{bmatrix}
-\begin{bmatrix}
-2 \\
-3 \\
-4 
-\end{bmatrix} = \begin{bmatrix}
-a \\
-b \\
-c 
-\end{bmatrix}
-$$
-
-Suppose we want to multiply $3\times 3$ matrix and $3\times 1$ column vector. Let us count how many operations are needed to do this. To get $a$, we need 3 (real number) multiplications and 2 (real number) additions. We need the same amount of computation for $b$ and $c$. If we increase the sizes to $4\times 4$ (matrix) and $4\times 1$ (vector), or more generally, to $n\times n$ (matrix) and $n\times 1$ (vector), we need the following number of operations.
-| size | ($\times$) | ($+$) | total |
-|:-:|:-:|:-:|:-:|
-| 3 | $3\times3=9$| $2\times3=6$ | 15 |
-| 4 | $4\times4=16$| $3\times4=12$ | 28 |
-| $n$ | ? | ?| ? |
-
-> **Question**
->
-> Fill the talbe and find the best big-oh notation.
->
-> Complexity $=$ (   ?   )
->
-> Separate the answer by commas.
-> (Reminder) This is **about atmosphere**, not getting it right.
-> 
-> 1. Think for a short time.
-> 2. Share your guess with your pair.
-> 3. Type your answer in clicker.
-> 4. Feel free to say out loud.
- 
-<!--| n | $n\times n=n^2$| $(n-1)\times n=n^2 -n$ | $2n^2 -n$ |
-
-Using the big-oh notation for growing quantities (since $n\to\infty$ as we increase the size), we have
-$$ c(n) =  {\mathcal{O}\!\left( n^2 \right)}, $$
-
-where $c(n)$ denotes the number of operations needed to compute the product of $n\times n$ matrix and $n\times 1$ vector. This way, we can have a quick, but still good picture of how much it costs in terms of computation.  
--->
 
 ###### Example: Application of Taylor's theorem
 
@@ -366,6 +349,27 @@ where $c(n)$ denotes the number of operations needed to compute the product of $
 
 [Accuracy of difference quotient](https://jhparkyb.github.io/resources/notes/na/104ABoardWork_NumDiffInt000.png)
 
+
+> **Question**
+> $$ \begin{split}
+\cos x &=1 - \frac{x^2}{2 !} + \frac{x^4}{4 !} + {\mathcal{O}\!\left( x^6 \right)}\quad\text{as}\quad x\to0.
+	\\
+	c(n) &= 2n^2 -n = {\mathcal{O}\!\left( n^2 \right)} \quad\text{as}\quad n\to\infty,
+	\end{split} 
+$$
+> 
+> Give a second look at the examples of $\cos(x)$ and the complexity of matrix multiplication. Which part of each of those quantities is negligible and which part matters?
+>  
+>
+> (Reminder) This is **about atmosphere**, not getting it right.
+> 
+> 1. Think for a short time.
+> 2. Share your guess with your pair.
+> 3. Type your answer in clicker.
+> 4. Feel free to say out loud.
+
+
+
 ### Remarks
 
 ###### Remark: Advantage of big-oh
@@ -373,6 +377,12 @@ where $c(n)$ denotes the number of operations needed to compute the product of $
 > **Remark** (Advantage of big-oh)
 >
 > Big-oh notation allows us to forget about unimportant details (i.e., exact behaviors of a function) and to focus on what really matters (i.e., what is the magnitude of the function like) when it is helpful.
+
+###### Remark: Big-oh term may or may not matter
+
+> **Remark** (Big-oh term may or may not matter)
+>
+> Sometimes big-oh term is the one that matters. This is typically true for growing quanitities. Sometimes, big-oh term is the one that is negligible. This is usually the case for finite quantities. 
 
 ###### Remark: Big-oh is about inequality, not equality
 
@@ -398,19 +408,19 @@ where $c(n)$ denotes the number of operations needed to compute the product of $
 >
 > Observe, however, as you can see from the above reasoning, big-oh encapsulates inequalities.
 
+
 ###### Remark: The order of error term depends on the context
 
 > **Remark** (The order of error term depends on the context)
 > 
-> In [Example: Big-oh notation with exponential](#example-big-oh-notation-with-exponential), if one knows $x$ is close to $0$, it is sensible to ignore those terms and focus only on the first few. Notice higher order terms matter less since $x$ is small (In general case, $x-x_0$ is small).
-> Thus, if we want to focus on the terms up to 2nd order, we write
+> Consider the following example. If we want to focus on the terms up to 2nd order, we write
 > $$ \begin{split}
     e^x & = 1+ x + \frac 1 2 x^2 + \underbrace{\frac 1 6 x^3 + \cdots + \frac 1 {n!} x^n +\cdots}_{=\;{\mathcal{O}\left( |x|^3 \right)}}
     \\
     & = 1+ x + \frac 1 2 x^2 + {\mathcal{O}\left( |x|^3 \right)} \quad\text{as}\quad x\to 0.
     \end{split}
     $$
-> Or, if it turns out we need to include one more term, we write
+> However, while continuing working on, we may need more terms. If it turns out we need to include one more term, we write
 > $$ 
     e^x  = 1+ x + \frac 1 2 x^2 + \frac 1 6 x^3 +  \mathcal{O}\left( |x|^4 \right) \quad\text{as}\quad x\to 0.
     $$
@@ -519,3 +529,15 @@ $$
 > 2. Share your guess with your pair.
 > 3. Type your answer in clicker.
 > 4. Feel free to say out loud.
+
+#### Summary
+
+- Big 'oh' notation allows us to focus only on the most important term out of (possibly) infinitely many terms. (See [Advantage of big-oh](#remark-advantage-of-big-oh))
+	
+	- In some cases, all terms except the big-oh term matter. (See [Example: Big-oh notation with exponential](#example-big-oh-notation-with-cosine))
+    - In other cases, only the big-oh term matters. (See [Example: Big-oh notation for complexity of matrix multiplication](#example-big-oh-notation-for-complexity-of-matrix-multiplication))
+- Big 'oh' is essentially *inequality*. It is not an equality, though its notation uses '$=$' sign. (See [Remark: Big-oh is about inequality, not equality](#remark-big-oh-is-about-inequality-not-equality))
+
+- Eventually, people use big-oh notation at an intuitive level. But it is good to see it works rigorously as well to convince yourself. (See [Appendix](#appendix) for some rigorous approaches)
+
+
