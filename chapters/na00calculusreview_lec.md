@@ -349,7 +349,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 >
 > 
 
-[Accuracy of difference quotient](https://jhparkyb.github.io/resources/notes/na/104ABoardWork_NumDiffInt000.png)
+[Proof of accuracy of difference quotient](https://jhparkyb.github.io/resources/notes/na/pf_DiffQuotConvRate_lp2000.png)
 
 
 > **Question**
@@ -481,7 +481,7 @@ Q.E.D.
 
 ###### Error term via Taylor theorem
 
-The most common situation where big-oh notation is used is when analyzing errors using Taylor theorem. Suppose that the context of the analysis somehow hints that knowing only the terms up to 2nd order is enough. Suppose you are studying the difference $f(x) - f(a)$ for some $x$ close to $a$, say, $x\in(a-\delta, a+\delta)$. Then, by [Taylor theorem](#taylors-theorem), we have
+The most common situation where big-oh notation is used is when analyzing errors using Taylor theorem. Suppose that the context of the analysis somehow hints that knowing only the terms up to 2nd order is enough. Suppose you are studying the difference $f(x) - f(a)$ for some $x$ close to $a$, say, $x\in(a-\delta, a+\delta)$ for some $\delta > 0$. Then, by [Taylor theorem](#taylors-theorem), we have
 
 \[
 	f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!} (x-a)^2  +\underbrace{\frac{f'''(\xi)}{3!}(x-a)^3}
