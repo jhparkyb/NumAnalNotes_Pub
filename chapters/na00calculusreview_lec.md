@@ -45,8 +45,8 @@ After studying these notes, we will be able to
 > 
 > where $\xi\in (x, x_0)$ if $x<x_0$ or $\xi\in (x_0, x)$ if $x_0<x$.
 
-[proof of Taylor's theorem with Lagrange remainder 1](https://jhparkyb.github.io/resources/notes/na/pf_TaylorThmLag1.png)
-[proof of Taylor's theorem with Lagrange remainder 2](https://jhparkyb.github.io/resources/notes/na/pf_TaylorThmLag2.png)
+[proof of Taylor's theorem with Lagrange remainder 1](https://jhparkyb.github.io/resources/notes/na/pf_TaylorThmLag1_lp3000.png)
+[proof of Taylor's theorem with Lagrange remainder 2](https://jhparkyb.github.iodocs/resources/notes/na/pf_TaylorThmLag2_lp3001.png)
 
 
 ### Big-oh notation
