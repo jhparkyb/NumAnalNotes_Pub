@@ -481,14 +481,14 @@ Q.E.D.
 
 ###### Error term via Taylor theorem
 
-The most common situation where big-oh notation is used is when analyzing errors using Taylor theorem. Suppose that the context of the analysis somehow hints that knowing only the terms up to 2nd order is enough. Suppose you are studying the difference $f(x) - f(a)$ for some $x$ close to $a$, say, $x\in(a-\delta, a+\delta)$ for some $\delta > 0$. Then, by [Taylor theorem](#taylors-theorem), we have
+The most common situation where big-oh notation is used is when analyzing errors using Taylor theorem. Suppose that the context of the analysis somehow hints that knowing only the terms up to 2nd order is enough. Suppose you are studying the difference $f(x) - f(a)$ for some $x$ close to $a$. First, take $\delta>0$ small enough so that we can apply [Taylor theorem](#taylors-theorem) on $(a-\delta, a+\delta)$ and $f'''(x)$ is continuous on $[a-\delta, a+\delta]$. (We can always take a smaller $\delta$ if one of these two is not met.) Then, $|f'''(x)|$ attains the maximum $M_0$ on the closed interval $[a-\delta, a+\delta]$ ([Extreme value theorem](#extreme-value-theorem)).  Now, for any $x\in(a-\delta, a+\delta)$, we have, by Taylor's theorem,
 
 \[
 	f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!} (x-a)^2  +\underbrace{\frac{f'''(\xi)}{3!}(x-a)^3}
 	_{\mathcal{O}\!\left( |x-a|^3 \right)},
 \]
 
-for some $\xi\in (x, a)$ or $\xi\in (a, x)$ depending on $x<a$ or $a<x$. If $f'''(x)$ is continuous, then $|f'''(x)|$ attains the maximum $M_0$ on a closed subinterval of $[a-\delta/2, a+\delta/2]\subset(a-\delta, a+\delta)$ ([Extreme value theorem](#extreme-value-theorem)). Thus, for all $x\in (a-\delta/3, a+\delta/3)$, we have
+for some $\xi\in (x, a)$ or $\xi\in (a, x)$ depending on $x<a$ or $a<x$. Thus, for all $x\in (a-\delta, a+\delta)$, we have
 $$\left|\frac{f'''(\xi)}{3!}(x-a)^3 \right|\le C|x-a|^3,$$ where $C=M_0/3!$. Therefore, we conclude
 $$
 \frac{f'''(\xi)}{3!}(x-a)^3 = 
