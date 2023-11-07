@@ -1,2 +1,5 @@
 # insync data file
 *.insyncdl
+
+# .DS_Store
+*.DS_Store
