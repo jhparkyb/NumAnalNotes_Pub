@@ -3,7 +3,7 @@
 #### Course outcomes
 
 | Course outcome | What it is about |
-|:--:|:--|
+|---|---|
 | *Scientific Literacy* | I can explain and give reference to important results about numerical methods and theory in a precise manner with references.|
 | *Core Knowledge* (Facts and Intuition) | I can explain important facts about numerical methods and the intuition behind them.|
 |*Analysis*| I can give rigorous analysis of numerical methods.|
@@ -186,7 +186,7 @@ There are slightly different variants of the definitions. We follow essentially 
 >
 > Suppose $f(x)={\mathcal{O}\!\left( h(x) \right)}$ as $x\to x_0$. To use big-oh notation in a useful way, we usually set:
 > | $f$ | $h$ |
-> |:-:|:-:|
+> |---|---|
 > |function we want to study| a simpler function than $f$ |
 > 
 > Then, the big-oh condition says that *the magnitude of $f$ can be controlled or bounded by $g$*. 
@@ -263,7 +263,7 @@ There are slightly different variants of the definitions. We follow essentially 
 > 
 > Suppose we want to multiply $3\times 3$ matrix and $3\times 1$ column vector. Let us count how many operations are needed to do this. To get $a$, we need 3 (real number) multiplications and 2 (real number) additions. We need the same amount of computation for $b$ and $c$. If we increase the sizes to $4\times 4$ (matrix) and $4\times 1$ (vector), or more generally, to $n\times n$ (matrix) and $n\times 1$ (vector), we need the following number of operations.
 > | size | ($\times$) | ($+$) | total |
-> |:-:|:-:|:-:|:-:|
+> |---|---|---|---|
 > | 3 | $3\times3=9$| $2\times3=6$ | 15 |
 > | 4 | $4\times4=16$| $3\times4=12$ | 28 |
 > | $n$ | ? | ?| ? |
@@ -279,7 +279,7 @@ where $c(n)$ denotes the number of operations needed to compute the product of $
 > Fill the table and find the best big-oh notation.
 >
 > | Answer choice | big-oh |
-> |:-:|:-:|
+> |---|---|
 > |(A) | ${\mathcal{O}\!\left( n \right)}$ |
 > |(B) | ${\mathcal{O}\!\left( n^2 \right)}$ |
 > |(C) | ${\mathcal{O}\!\left( n^3 \right)}$ |
