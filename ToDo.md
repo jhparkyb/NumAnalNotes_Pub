@@ -6,3 +6,4 @@ This document collects what is desired to be done to improve the notes.
     - [ ] ~~Add comments where the differences are relevant.~~ --> Add hyperlinks to the summary block (One source principle)
     - [ ] Add a summary block that collects the differences.
 - [ ] Give the version of the pacakges for more accurate information. 
+- [ ] Add the definition of $\Pi_n$--exactness.
