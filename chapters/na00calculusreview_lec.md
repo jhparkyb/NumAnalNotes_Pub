@@ -43,7 +43,7 @@ After studying these notes, we will be able to
 > \end{split}
 > \]
 > 
-> where $\xi\in (x, x_0)$ if $x<x_0$ or $\xi\in (x_0, x)$ if $x_0<x$.
+> where $\xi\in (x, x_0)$ if $x < x_0$ or $\xi\in (x_0, x)$ if $x_0 < x$.
 
 [proof of Taylor's theorem with Lagrange remainder 1](https://jhparkyb.github.io/resources/notes/na/pf_TaylorThmLag1_lp3000.png)
 [proof of Taylor's theorem with Lagrange remainder 2](https://jhparkyb.github.iodocs/resources/notes/na/pf_TaylorThmLag2_lp3001.png)
@@ -488,7 +488,7 @@ The most common situation where big-oh notation is used is when analyzing errors
 	_{\mathcal{O}\!\left( |x-a|^3 \right)},
 \]
 
-for some $\xi\in (x, a)$ or $\xi\in (a, x)$ depending on $x<a$ or $a<x$. Thus, for all $x\in (a-\delta, a+\delta)$, we have
+for some $\xi\in (x, a)$ or $\xi\in (a, x)$ depending on $x < a$ or $a < x$. Thus, for all $x\in (a-\delta, a+\delta)$, we have
 $$\left|\frac{f'''(\xi)}{3!}(x-a)^3 \right|\le C|x-a|^3,$$ where $C=M_0/3!$. Therefore, we conclude
 $$
 \frac{f'''(\xi)}{3!}(x-a)^3 = 
