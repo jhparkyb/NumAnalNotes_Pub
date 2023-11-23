@@ -4,9 +4,9 @@ This document collects what is desired to be done to improve the notes.
 
 ### Add remaining topics
 
-- [ ] Multistep methods
-  - [ ] BDF
-  - [ ] Predictor-corrector
+- [x] Multistep methods
+  - [x] BDF
+  - [x] Predictor-corrector
 - [ ] Analysis of multistep methods
   - [ ] Consistency order, order condition
   - [ ] zero-stability, root condition
