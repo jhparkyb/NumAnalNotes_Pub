@@ -8,10 +8,10 @@ This document collects what is desired to be done to improve the notes.
   - [x] BDF
   - [x] Predictor-corrector
 - [ ] Analysis of multistep methods
-  - [ ] Consistency order, order condition
-  - [ ] zero-stability, root condition
-  - [ ] Equivalence theorem
-  - [ ] Dahlquist barriers
+  - [x] Consistency order, order condition
+  - [x] zero-stability, root condition
+  - [x] Equivalence theorem
+  - [x] Dahlquist barriers
 - [x] Stiffness
 
 ### Correction/Clarification
