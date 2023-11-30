@@ -17,8 +17,10 @@ This document collects what is desired to be done to improve the notes.
 ### Correction/Clarification
 
 - [x] Add the definition of $\Pi_n$--exactness.
-- [ ] range of maximum of (d/dt)^3 f(t,x(t))
-- [ ] typo (t_{n-1},x_{n-1})
+- [x] range of maximum of (d/dt)^3 f(t,x(t))
+- [x] typo (t_{n-1},x_{n-1})
+- [ ] Include and announce long explanation materials.
+- [ ] Comments on assign pages of UQs.
 
 ### Good to have, not necessary
 
