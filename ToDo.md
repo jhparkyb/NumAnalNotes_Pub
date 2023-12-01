@@ -7,7 +7,7 @@ This document collects what is desired to be done to improve the notes.
 - [x] Multistep methods
   - [x] BDF
   - [x] Predictor-corrector
-- [ ] Analysis of multistep methods
+- [x] Analysis of multistep methods
   - [x] Consistency order, order condition
   - [x] zero-stability, root condition
   - [x] Equivalence theorem
