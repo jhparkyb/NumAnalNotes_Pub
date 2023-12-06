@@ -374,7 +374,10 @@ We state and prove some frequently used properties of big-oh relations for the f
 > **Example** (Accuracy of difference quotient)
 >
 > Suppose that $f:\mathbb{R} \to \mathbb{R}$ is continuously differentiable near $x_0\in R$. Then, we have
-> \[ \frac{f(x_0 + h) - f(x_0)}{h} = f^\prime(x_0) + {\mathcal{O}\!\left( h \right)} \]
+> 
+> $$ 
+> \frac{f(x_0 + h) - f(x_0)}{h} = f^\prime(x_0) + {\mathcal{O}\!\left( h \right)}. 
+> $$
 > 
 > **Interpretation**
 >
