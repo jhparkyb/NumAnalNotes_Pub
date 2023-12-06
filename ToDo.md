@@ -4,22 +4,10 @@ This document collects what is desired to be done to improve the notes.
 
 ### Add remaining topics
 
-- [x] Multistep methods
-  - [x] BDF
-  - [x] Predictor-corrector
-- [x] Analysis of multistep methods
-  - [x] Consistency order, order condition
-  - [x] zero-stability, root condition
-  - [x] Equivalence theorem
-  - [x] Dahlquist barriers
-- [x] Stiffness
 
 ### Correction/Clarification
 
-- [x] Add the definition of $\Pi_n$--exactness.
-- [x] range of maximum of (d/dt)^3 f(t,x(t))
-- [x] typo (t_{n-1},x_{n-1})
-- [ ] Include and announce long explanation materials.
+- [ ] Github LaTeX rendering issue to be fixed
 - [ ] Comments on assign pages of UQs.
 
 ### Good to have, not necessary
