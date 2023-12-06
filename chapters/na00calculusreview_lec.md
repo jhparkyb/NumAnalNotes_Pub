@@ -426,7 +426,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 
 > **Warning** (Big-oh is about inequality, not equality)
 >
-> Consider $f(x)=x^3$ and $g(x)=x^2$ around $x_0=0$. If $x$ is close enough to $x_0=0$, say $\delta = 0.1$ (hence $x \in (-0.1, 0.1)$), we have
+> Consider $f(x)=x^3$ and $g(x)=x^2$ around $x_0=0$. If $x$ is close enough to $x_0=0$, say $\delta = 0.1$, hence $x \in (-0.1, 0.1)$, we have
 > 
 > $$ 
 > |f(x)|=|x|^3 \le 0.1|x|^2.
@@ -462,7 +462,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 > 
 > $$ 
 > \begin{split}
-> e^x & = 1+ x + \frac 1 2 x^2 + \underbrace{\frac 1 6 x^3 + \cdots + \frac 1 {n!} x^n +\cdots}_{=\;{\mathcal{O}\left( |x|^3 \right)}}
+> e^x & = 1+ x + \frac 1 2 x^2 + \underbrace{\frac 1 6 x^3 + \cdots + \frac 1 {n!} x^n +\cdots}_{=\ {\mathcal{O}\left( |x|^3 \right)}}
 > \\
 > & = 1+ x + \frac 1 2 x^2 + {\mathcal{O}\left( |x|^3 \right)} \quad\text{as}\quad x\to 0.
 > \end{split}
@@ -487,6 +487,7 @@ In the [example of Taylor seires of exponential](#example-big-oh-notation-with-e
 $$
 \frac 1 6 x^3 + \frac 1 {24} x^4 +\cdots = \mathcal{O}\left( |x|^3 \right) \quad\text{as}\quad x\to 0.
 $$
+
 Let us justify this. 
 
 (step 1)
@@ -603,7 +604,7 @@ $$
 	
 	- In some cases, all terms except the big-oh term matter. (See [Example: Big-oh notation with cosine](#example-big-oh-notation-with-cosine)) 
     - In other cases, only the big-oh term matters. (See [Example: Big-oh notation for complexity of matrix multiplication](#example-big-oh-notation-for-complexity-of-matrix-multiplication))
-- Big 'oh' is essentially *inequality*. It is not an equality, though its notation uses '$=$' sign. (See [Remark: Big-oh is about inequality, not equality](#remark-big-oh-is-about-inequality-not-equality))
+- Big 'oh' is essentially *inequality*. It is not an equality, though its notation uses $=$ sign. (See [Remark: Big-oh is about inequality, not equality](#remark-big-oh-is-about-inequality-not-equality))
 
 - Eventually, people use big-oh notation at an intuitive level. But it is good to see it works rigorously as well to convince yourself. (See [Appendix](#appendix) for some rigorous approaches)
 
