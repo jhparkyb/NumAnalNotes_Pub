@@ -58,15 +58,20 @@ After studying these notes, we will be able to
 
 ###### Example: Big-oh notation with exponential in easy language
 
- **Example** (Taylor series of exponential -  easy language)
+**Example** (Taylor series of exponential -  easy language)
+Recall from calculus, for any $x\in\mathbb{R}$, we have
 
- Recall from calculus, for any $x\in\mathbb{R}$, we have
- $$ e^x = 1+ x + \frac 1 2 x^2 + \frac 1 6 x^3 + \cdots + \frac 1 {n!} x^n +\cdots. $$
- Note that this "equality" is "more true" near $x_0=0$ since the series is expanded around $x_0=0$. For example, if $x=0.1$, then the sum becomes
- $$
+$$ 
+e^x = 1+ x + \frac 1 2 x^2 + \frac 1 6 x^3 + \cdots + \frac 1 {n!} x^n +\cdots. 
+$$
+
+Note that this "equality" is "more true" near $x_0=0$ since the series is expanded around $x_0=0$. For example, if $x=0.1$, then the sum becomes
+
+$$
 e^{0.1} = 1+ 0.1 + \frac {0.01}{2} + \frac {0.001} 6 + \frac {0.0001} {24} + \cdots .
-   $$
- 	After the first few terms, the magnitude of the remaining terms are so small that it does not change the whole sum much. 
+$$
+ 	
+After the first few terms, the magnitude of the remaining terms are so small that it does not change the whole sum much. 
 
 		partial sum	error
 	0	1.000000	1.051709e-01
