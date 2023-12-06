@@ -194,7 +194,7 @@ There are slightly different variants of the definitions. We follow essentially 
 > f(x)={\mathcal{O}\!\left( g(x) \right)} \quad\text{as}\quad x\to \infty,
 > $$
 >	
-> and say *f(x) is a big oh of $g(x)$ as $x$ grows* or  *f(x) is of order of $g(x)$ as $x$ grows*.
+> and say $f(x)$ is a big oh of $g(x)$ as $x$ grows or  $f(x)$ is of order of $g(x)$ as $x$ grows.
 
 > **Notation** (error form of big-oh)
 >
