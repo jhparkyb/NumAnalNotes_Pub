@@ -168,6 +168,7 @@ There are slightly different variants of the definitions. We follow essentially 
 > $$ 
 > \frac{|f(x)|}{|g(x)|}\le C  \quad \text{for all } x\in (x_0 - \delta, x_0 + \delta)\backslash\{x_0\},
 > $$
+> 
 >  then we write 
 > 
 > $$
