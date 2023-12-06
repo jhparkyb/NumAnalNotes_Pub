@@ -426,7 +426,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 
 > **Warning** (Big-oh is about inequality, not equality)
 >
-> Consider $f(x)=x^3$ and $g(x)=x^2$ around $x_0=0$. If $x$ is close enough to $x_0=0$, say $\delta = 0.1$ (hence $x\in(-0.1, 0.1)$), we have
+> Consider $f(x)=x^3$ and $g(x)=x^2$ around $x_0=0$. If $x$ is close enough to $x_0=0$, say $\delta = 0.1$ (hence $x \in (-0.1, 0.1)$), we have
 > 
 > $$ 
 > |f(x)|=|x|^3 \le 0.1|x|^2.
@@ -440,7 +440,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 > 
 > with the constant $C=0.1>0$ appearing in the definition.
 >
-> However, we do not have "$g(x) = {\mathcal{O}\!\left( f(x) \right)}$ as $x\to 0$."
+> However, we do not have $g(x) = {\mathcal{O}\!\left( f(x) \right)}$ as $x\to 0$.
 >
 >
 > To see this, observe that it is impossible to choose a fixed constant $C>0$ that satisfies "for all $x\in(-0.1, 0.1)$, $|x|^2 \le C|x|^3$": taking smaller and smaller $x$'s, $C|x|^3$ eventually becomes smaller than $|x|^2$ no matter how big $C$ you choose.
