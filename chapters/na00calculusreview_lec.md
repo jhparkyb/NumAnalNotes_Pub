@@ -175,7 +175,7 @@ There are slightly different variants of the definitions. We follow essentially 
 > f(x)={\mathcal{O}\!\left( g(x) \right)} \quad\text{as}\quad x\to x_0,
 > $$
 >	
-> and say "$f(x)$ is a big oh of $g(x)$ near $x_0$" or  "$f(x)$ is of order of $g(x)$ near $x_0$."
+> and say $f(x)$ is a big oh of $g(x)$ near $x_0$ or  $f(x)$ is of order of $g(x)$ near $x_0$.
 >
 
 ###### Definition: Big-oh for growing quantities
