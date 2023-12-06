@@ -427,6 +427,7 @@ We state and prove some frequently used properties of big-oh relations for the f
 > **Warning** (Big-oh is about inequality, not equality)
 >
 > Consider $f(x)=x^3$ and $g(x)=x^2$ around $x_0=0$. If $x$ is close enough to $x_0=0$, say $\delta = 0.1$ (hence $x\in(-0.1, 0.1)$), we have
+> 
 > $$ 
 > |f(x)|=|x|^3 \le 0.1|x|^2.
 > $$ 
