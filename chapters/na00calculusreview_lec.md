@@ -220,8 +220,8 @@ Then, the big-oh condition says that *the magnitude of $f$ can be controlled or 
 **Interpretation** (error form of big-oh)
 
 The error form is the most common form of big-oh (e.g., $f(x) = g(x) + {\mathcal{O}\!\left( h(x) \right)}$ as $x\to x_0$). Intuitively, we can interpret it as follows:
-- *the error caused by $g(x)$ in place of $f(x)$ is no worse than $h(x)$ (up to constant multiple)*, or
-- *f(x) is made up of $g(x)$ and something that behaves like $h(x)$ (up to constant multiple), which is assumed to be small*.
+- the error caused by $g(x)$ in place of $f(x)$ is no worse than $h(x)$ (up to constant multiple), or
+- f(x) is made up of $g(x)$ and something that behaves like $h(x)$ (up to constant multiple), which is assumed to be small.
 
 ###### Example: Big-oh notation with cosine
  
