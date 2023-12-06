@@ -36,7 +36,9 @@ After studying these notes, we will be able to
 > **Theorem** (Taylor's theorem with Lagrange remainder)
 >
 > Suppose $\delta>0$ and a real valued funtion $f$ defined on $I=(x_0-\delta, x_0 +\delta)$ is $k+1$ times differentiable. Then, for any $x\in I$, we have
-> $$\begin{split}
+> 
+> $$
+> \begin{split}
 > f(x) &= f(x_0) + f'(x_0)(x-x_0)+ \frac{f''(x_0)}{2!}(x-x_0)^2+\cdots
 > \\
 > &\quad +\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k +\frac{f^{(k+1)}(\xi)}{(k+1)!}(x-x_0)^{k+1},
