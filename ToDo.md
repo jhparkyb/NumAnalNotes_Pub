@@ -7,8 +7,6 @@ This document collects what is desired to be done to improve the notes.
 
 ### Correction/Clarification
 
-- [ ] Github LaTeX rendering issue to be fixed
-- [ ] Comments on assign pages of UQs.
 
 ### Good to have, not necessary
 

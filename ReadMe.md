@@ -3,6 +3,15 @@
 This repository collects materials for Introductory Numerical Analysis by Jea-Hyun Park. 
 Date created: 2023-09-22
 
+## Design/Style of notes
+
+The philosophy behind these notes is to collect various forms of materials in one place: text (statements, summaries, remarks), figures, computational implementations, handwritten notes, links to other resources (interactive modules, further references). 
+
+- These notes must be supplemented by instructors' guides. These notes are not meant to be a textbook.
+- Due to this style, readers should use "mathematical" reading skills: quite often, a single comment may be summarizing a very important fact, intuition, guidance for a big picture. 
+- However, I have been trying to at least mention all important things.
+- Some contents are not presented in its best form for now. For example, some slides-style figures may be better to be presented in text form. These will be updated over time.
+
 ## Computation environment
 
 We use Python and Jupyter notebook.
