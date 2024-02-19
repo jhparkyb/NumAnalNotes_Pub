@@ -2,7 +2,7 @@ import numpy as np
 
 def secant(f, ini1, ini2, tol=1e-8, max_iter=100):
     """
-    Return an approximate root of a function using Newton's method.
+    Return an approximate root of a function using Secant's method.
 
     INPUT
         f: function whose zero is sought.
