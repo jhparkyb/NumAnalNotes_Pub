@@ -90,3 +90,56 @@ def tridiag(sub_diag, diag, super_diag, n):
     A = toeplitz(col) if row != None else toeplitz(col, row)
 
     return A
+
+def CG(A, b, x0, tol=1e-9, max_iter=None):
+    """
+    Conjugate Gradient method for solving linear systems of equations. The matrix must be symmetric and positive definite.
+    
+    Parameters:
+        A (ndarray): The coefficient matrix of the linear system.
+        b (ndarray): The right-hand side vector of the linear system.
+        x0 (ndarray): The initial guess for the solution.
+        max_iter (int): The maximum number of iterations (default: 100).
+        tol (float): The tolerance for convergence (default: 1e-9).
+    
+    Returns:
+        x (ndarray): The approximate solution to the linear system.
+        i (int): The number of iterations performed.
+    """
+    # default number of iterations is the dimension of the matrix
+    if max_iter is None:
+        n = A.shape[0]
+        max_iter = n
+
+    # initialize
+    x = x0
+    r = b - A @ x
+    d = r
+
+    r_nrm2 = np.dot(r, r)
+
+    for i in range(1, max_iter + 1): 
+        # intermediate computations part 1 
+        Ad = A @ d
+
+        # main conjugate gradient iteration part 1
+        alpha = r_nrm2 / np.dot(d, Ad)
+        x = x + alpha * d
+        r_new = r - alpha * Ad
+        
+        # intermediate computations part 2
+        r_new_nrm2 = np.dot(r_new, r_new)
+        
+        # stopping criterion
+        if np.sqrt(r_new_nrm2) < tol:
+            break
+
+        # main conjugate gradient iteration part 2
+        beta = r_new_nrm2 / r_nrm2
+        d = r_new + beta * d
+        
+        # updata
+        r = r_new
+        r_nrm2 = r_new_nrm2
+    
+    return x, i
