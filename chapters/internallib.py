@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.linalg import toeplitz
 
 def secant(f, ini1, ini2, tol=1e-8, max_iter=100):
     """
@@ -63,3 +64,29 @@ def RK4(F, x0, t0, T, K):
         xx[k+1] = x + tau/6*(k1 + 2*k2 + 2*k3 + k4)
     
     return xx, tgrid
+
+def tridiag(sub_diag, diag, super_diag, n):
+    """
+    Return tridiagonal matrix.
+
+    INPUT
+        sub_diag: sub-diagonal elements
+        diag: diagonal elements
+        super_diag: super-diagonal elements
+        n: size of the matrix
+    OUTPUT
+        A: tridiagonal matrix
+    """
+    col = np.zeros(n)
+    col[0] = diag
+    col[1] = sub_diag
+    if sub_diag != super_diag:
+        row = np.zeros(n)
+        row[0] = diag
+        row[1] = super_diag
+    else:
+        row = None
+        
+    A = toeplitz(col) if row != None else toeplitz(col, row)
+
+    return A
