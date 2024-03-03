@@ -11,10 +11,7 @@ This document collects what is desired to be done to improve the notes.
 
 ### Correction/Clarification
 
-- [ ] Add classification of numerical methods for IVPs
-  - [ ] Add remark: multistep vs single step
-  - [ ] Add remark: stages vs multistep
-  - [ ] Add remark: implict vs explicit
+- [ ] None
 
 ### Good to have, not necessary
 
