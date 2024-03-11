@@ -143,3 +143,23 @@ def CG(A, b, x0, tol=1e-9, max_iter=None):
         r_nrm2 = r_new_nrm2
     
     return x, i
+
+def poly_eval(c, x, order='increasing'):
+    """
+    Evaluate a polynomial at a given point.
+
+    Parameters:
+        c (ndarray): The coefficients of the polynomial.
+        x (ndarray): The point at which to evaluate the polynomial.
+        order (str): The order of the coefficients (default: 'increasing').
+    
+    Returns:
+        p (ndarray): The value of the polynomial at the point x.
+    """
+    if c.ndim > 1:
+        raise ValueError("The coefficients must be a 1D array.")
+    
+    n = c.shape[0]
+    pow = np.arange(n) if order == 'increasing' else np.arange(n)[::-1]
+
+    return np.sum(c * np.power(x[:, np.newaxis], pow), axis=1)
