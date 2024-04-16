@@ -144,7 +144,26 @@ def CG(A, b, x0, tol=1e-9, max_iter=None):
     
     return x, i
 
-def poly_eval(c, x, order='increasing'):
+def poly_eval(a, x, algorithm='Horner'):
+    """
+    Evaluates a polynomial at a given point x.
+
+    Inputs:
+        a: 1D array of polynomial coefficients (ascending order). 
+        x: 1D array of points at which to evaluate the polynomial.
+        algorithm: algorithm to use for polynomial evaluation. (default: 'Horner')
+    Output:
+        p: array of polynomial values at x.
+    """
+    
+    if algorithm == 'Horner':
+        p = a[-1]*np.ones_like(x) # broadcasting is in effect 
+        for i in range(len(a)-2, -1, -1):
+            p = x*p + a[i]
+    
+    return p
+
+def poly_eval_simplest(c, x, order='increasing'):
     """
     Evaluate a polynomial at a given point.
 
@@ -155,6 +174,10 @@ def poly_eval(c, x, order='increasing'):
     
     Returns:
         p (ndarray): The value of the polynomial at the point x.
+
+    Note:
+        This function implements the simplest translation of mathematical work.
+        That is, it does not utilize Horner's meothod or any other optimization.
     """
     if c.ndim > 1:
         raise ValueError("The coefficients must be a 1D array.")
