@@ -214,3 +214,31 @@ def qr(A):
         Q[:, i:] = Q[:, i:] - (Q[:, i:] @ v_) @ v.T
 
     return Q, R    
+
+def lin_comb(fs, cs, x, plot=False, **kwarg):
+    """
+    Return 1D array of the linear combination of functions evaluated at a grid domain.
+
+    Input:
+        fs (list): (stands for functions) ndarray compatible functions
+        cs (array-like): (stands for coefficients) coefficients of same length of fs
+        x: grid domain
+    Output:
+        cfs: (stands for c*f's) array of function values of the linear combination evaluated
+        at the grid domain.
+    Side-effect:
+        plot
+    """
+    cfs = np.zeros((len(fs), len(x)))
+
+    for i, f in enumerate(fs):
+        cfs[i, :] = cs[i]*fs[i](x)
+    
+    cfs = np.sum(cfs, axis=0)
+    
+    if plot==True:
+        plt.figure(figsize=(9, 3))  
+        plt.plot(x, cfs, label="Linear combination")
+        plt.show()
+
+    return cfs
